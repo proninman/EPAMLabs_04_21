@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AT_homerwork", "AT_homerwork.csproj", "{A33538E9-3C93-4476-8D42-4579BB863B71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AT_homerwork", "AT_homerwork.csproj", "{A33538E9-3C93-4476-8D42-4579BB863B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mass", "..\mass\mass.csproj", "{7A18EF84-594A-4087-A292-7C577EDED4B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mass", "..\mass\mass.csproj", "{7A18EF84-594A-4087-A292-7C577EDED4B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AT_Lab2_Classes", "..\AT_Lab2_Classes\AT_Lab2_Classes.csproj", "{7B0D7C7C-05C1-4903-AB5C-0E55AB34FD84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7A18EF84-594A-4087-A292-7C577EDED4B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A18EF84-594A-4087-A292-7C577EDED4B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A18EF84-594A-4087-A292-7C577EDED4B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B0D7C7C-05C1-4903-AB5C-0E55AB34FD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B0D7C7C-05C1-4903-AB5C-0E55AB34FD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B0D7C7C-05C1-4903-AB5C-0E55AB34FD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B0D7C7C-05C1-4903-AB5C-0E55AB34FD84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
