@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AT_Lab2_Classes
 {
@@ -6,30 +9,61 @@ namespace AT_Lab2_Classes
     {
         static void Main(string[] args)
         {
-            
-{
+
+            {
 
                 // Создаем массивы имен для антагонистов
                 string[] skel = { "Череп", "Кость", "Скелет", "Остов", "Костяк", "Худой", "Мощи" };
                 string[] zomb = { "Плоть", "Гниль", "Мясо", "Нежиль", "Живой труп", "Нежить", "Нелюдь" };
                 string[] lic = { "Магик", "Колдун", "Некромант" };
-                // Заполняем параметры персонажа игрока- Количество жизней, атаку и защиту.
+                // Заполняем параметры персонажей игрока- Количество жизней, атаку и защиту.
                 Random rnd1 = new Random(99);
                 int hr_rnd2 = rnd1.Next(33, 66);
                 int hr_rnd3 = rnd1.Next(33, 66);
                 int hr_rnd4 = rnd1.Next(33, 66);
+                Hero hero = new Hero("Геральт", hr_rnd2, hr_rnd3, hr_rnd4);
+               
+
+                Random rnd2 = new Random(99);
+                int hr2_rnd2 = rnd1.Next(33, 66);
+                int hr2_rnd3 = rnd1.Next(33, 66);
+                int hr2_rnd4 = rnd1.Next(33, 66);
+                Hero hero2 = new Hero("Койон", hr2_rnd2, hr2_rnd3, hr2_rnd4);
+               
+
+                Random rnd3 = new Random(99);
+                int hr3_rnd2 = rnd1.Next(33, 66);
+                int hr3_rnd3 = rnd1.Next(33, 66);
+                int hr3_rnd4 = rnd1.Next(33, 66);
+                Hero hero3 = new Hero("Весемир", hr3_rnd2, hr3_rnd3, hr3_rnd4);
+                
+
+                List <Hero> heros = new List<Hero>();
+                heros.Add(hero);
+                heros.Add(hero2);
+                heros.Add(hero3);
+
+                 foreach (var o in heros.OrderBy(hero => hero.health))
+                {
+                   o.GetInfo();
+                }
 
 
-                Hero hero = new Hero("Избранный", hr_rnd2, hr_rnd3, hr_rnd4);
-                hero.GetInfo();
                 // Выбираем противника. Параметры противника генерируются случайным образом, но в соответствии с видом антагониста.
+                
+                
                 Console.WriteLine("Выберите  умертвия для поединка");
                 Console.WriteLine("1-Скелет. Сбалансирован, сочетает средние значения очков жизней, атаки и защиты");
                 Console.WriteLine("2-Зомби. Обладает внушительным здоровьем, слабой атакой и средней защитой");
                 Console.WriteLine("3-Лич. Обладает средним здоровьем, сильной атакой и слабой защитой");
-                int n = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    int n = Convert.ToInt32(Console.ReadLine());
+                
                 Random rnd = new Random();
                 int i = 0;
+                
+                
                 switch (n)
                 {
                     case 1:
@@ -150,12 +184,18 @@ namespace AT_Lab2_Classes
 
 
                         break;
-                    default:
-                        Console.WriteLine("Вы нажали неизвестную цифру");
-                        break;
+                     default:
+                     Console.WriteLine("Вы нажали неизвестную цифру");
+                     break;
                 }
+            }
 
-
+                 catch (Exception ex)
+                {
+                    Console.WriteLine($"Исключение: {ex.Message}");
+                    Console.WriteLine($"Метод: {ex.TargetSite}");
+                    Console.WriteLine($"Трассировка стека: {ex.StackTrace}");
+                }
 
 
 
